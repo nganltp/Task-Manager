@@ -31,25 +31,31 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.addJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddJob = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labJob = new System.Windows.Forms.Label();
+            this.btnView = new System.Windows.Forms.Button();
+            this.labDaily = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.panel1);
-            this.panelMenu.Location = new System.Drawing.Point(11, 31);
+            this.panelMenu.Location = new System.Drawing.Point(11, 12);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(826, 449);
+            this.panelMenu.Size = new System.Drawing.Size(826, 468);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labDaily);
+            this.panel2.Controls.Add(this.btnView);
+            this.panel2.Controls.Add(this.labJob);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.btnAddJob);
             this.panel2.Location = new System.Drawing.Point(3, 14);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(820, 48);
@@ -62,37 +68,52 @@
             this.panel1.Size = new System.Drawing.Size(820, 365);
             this.panel1.TabIndex = 0;
             // 
-            // menuStrip1
+            // btnAddJob
             // 
-            this.menuStrip1.AllowDrop = true;
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addJobToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(849, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip";
+            this.btnAddJob.Location = new System.Drawing.Point(3, 3);
+            this.btnAddJob.Name = "btnAddJob";
+            this.btnAddJob.Size = new System.Drawing.Size(92, 42);
+            this.btnAddJob.TabIndex = 0;
+            this.btnAddJob.Text = "Add Job";
+            this.btnAddJob.UseVisualStyleBackColor = true;
             // 
-            // addJobToolStripMenuItem
+            // dateTimePicker1
             // 
-            this.addJobToolStripMenuItem.Name = "addJobToolStripMenuItem";
-            this.addJobToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.addJobToolStripMenuItem.Text = "Add Job";
+            this.dateTimePicker1.Location = new System.Drawing.Point(531, 14);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // exitToolStripMenuItem
+            // labJob
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.labJob.AutoSize = true;
+            this.labJob.BackColor = System.Drawing.SystemColors.Control;
+            this.labJob.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labJob.ForeColor = System.Drawing.Color.Black;
+            this.labJob.Location = new System.Drawing.Point(414, 15);
+            this.labJob.Name = "labJob";
+            this.labJob.Size = new System.Drawing.Size(111, 20);
+            this.labJob.TabIndex = 2;
+            this.labJob.Text = "Job of day:";
             // 
-            // deleteToolStripMenuItem
+            // btnView
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.btnView.Location = new System.Drawing.Point(737, 8);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(70, 32);
+            this.btnView.TabIndex = 3;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
+            // 
+            // labDaily
+            // 
+            this.labDaily.AutoSize = true;
+            this.labDaily.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDaily.Location = new System.Drawing.Point(178, 3);
+            this.labDaily.Name = "labDaily";
+            this.labDaily.Size = new System.Drawing.Size(174, 44);
+            this.labDaily.TabIndex = 4;
+            this.labDaily.Text = "Daily Plan";
             // 
             // DailyPlan
             // 
@@ -100,15 +121,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 511);
             this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "DailyPlan";
             this.Text = "DailyPlan";
             this.panelMenu.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -117,9 +135,10 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addJobToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnAddJob;
+        private System.Windows.Forms.Label labDaily;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Label labJob;
     }
 }

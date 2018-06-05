@@ -38,6 +38,8 @@
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -125,18 +127,40 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(537, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
+            this.comboBox1.Size = new System.Drawing.Size(108, 21);
             this.comboBox1.TabIndex = 3;
+            // 
+            // btnExit
+            // 
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExit.Location = new System.Drawing.Point(651, 6);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(47, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDelete.Location = new System.Drawing.Point(704, 6);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(47, 23);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // UserControlJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UserControlJob";
-            this.Size = new System.Drawing.Size(829, 36);
+            this.Size = new System.Drawing.Size(757, 33);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -161,5 +185,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
