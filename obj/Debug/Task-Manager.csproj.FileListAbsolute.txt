@@ -9,3 +9,4 @@ D:\UIT\LTTQ\Task-Manager\obj\Debug\Task-Manager.csproj.CoreCompileInputs.cache
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task-Manager.exe
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task-Manager.pdb
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.DailyPlan.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.UserControlJob.resources

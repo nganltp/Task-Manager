@@ -36,13 +36,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task3 = new System.Windows.Forms.Panel();
+            this.btnEdit3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.task2 = new System.Windows.Forms.Panel();
+            this.btnEdit2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.task1 = new System.Windows.Forms.Panel();
+            this.btnEdit1 = new System.Windows.Forms.Button();
             this.task4 = new System.Windows.Forms.Panel();
+            this.btnEdit4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Panel();
@@ -53,10 +57,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownNotify = new System.Windows.Forms.NumericUpDown();
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
-            this.btnExit2 = new System.Windows.Forms.Button();
-            this.btnExit1 = new System.Windows.Forms.Button();
-            this.btnExit4 = new System.Windows.Forms.Button();
-            this.btnExit3 = new System.Windows.Forms.Button();
             this.content.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -151,12 +151,22 @@
             // 
             this.task3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.task3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
-            this.task3.Controls.Add(this.btnExit3);
+            this.task3.Controls.Add(this.btnEdit3);
             this.task3.Controls.Add(this.panel4);
             this.task3.Location = new System.Drawing.Point(301, 143);
             this.task3.Name = "task3";
             this.task3.Size = new System.Drawing.Size(256, 126);
             this.task3.TabIndex = 4;
+            // 
+            // btnEdit3
+            // 
+            this.btnEdit3.Location = new System.Drawing.Point(92, 102);
+            this.btnEdit3.Name = "btnEdit3";
+            this.btnEdit3.Size = new System.Drawing.Size(68, 21);
+            this.btnEdit3.TabIndex = 6;
+            this.btnEdit3.Text = "Edit";
+            this.btnEdit3.UseVisualStyleBackColor = true;
+            this.btnEdit3.Click += new System.EventHandler(this.btnEdit3_Click);
             // 
             // panel4
             // 
@@ -185,12 +195,22 @@
             // 
             this.task2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.task2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.task2.Controls.Add(this.btnExit2);
+            this.task2.Controls.Add(this.btnEdit2);
             this.task2.Controls.Add(this.panel2);
             this.task2.Location = new System.Drawing.Point(301, 8);
             this.task2.Name = "task2";
             this.task2.Size = new System.Drawing.Size(256, 126);
             this.task2.TabIndex = 4;
+            // 
+            // btnEdit2
+            // 
+            this.btnEdit2.Location = new System.Drawing.Point(92, 102);
+            this.btnEdit2.Name = "btnEdit2";
+            this.btnEdit2.Size = new System.Drawing.Size(68, 21);
+            this.btnEdit2.TabIndex = 3;
+            this.btnEdit2.Text = "Edit";
+            this.btnEdit2.UseVisualStyleBackColor = true;
+            this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
             // 
             // panel2
             // 
@@ -216,22 +236,42 @@
             // 
             this.task1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.task1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.task1.Controls.Add(this.btnExit1);
+            this.task1.Controls.Add(this.btnEdit1);
             this.task1.Location = new System.Drawing.Point(566, 8);
             this.task1.Name = "task1";
             this.task1.Size = new System.Drawing.Size(256, 126);
             this.task1.TabIndex = 4;
             // 
+            // btnEdit1
+            // 
+            this.btnEdit1.Location = new System.Drawing.Point(100, 102);
+            this.btnEdit1.Name = "btnEdit1";
+            this.btnEdit1.Size = new System.Drawing.Size(68, 21);
+            this.btnEdit1.TabIndex = 4;
+            this.btnEdit1.Text = "Edit";
+            this.btnEdit1.UseVisualStyleBackColor = true;
+            this.btnEdit1.Click += new System.EventHandler(this.btnEdit1_Click);
+            // 
             // task4
             // 
             this.task4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.task4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.task4.Controls.Add(this.btnExit4);
+            this.task4.Controls.Add(this.btnEdit4);
             this.task4.Controls.Add(this.panel5);
             this.task4.Location = new System.Drawing.Point(566, 143);
             this.task4.Name = "task4";
             this.task4.Size = new System.Drawing.Size(256, 126);
             this.task4.TabIndex = 3;
+            // 
+            // btnEdit4
+            // 
+            this.btnEdit4.Location = new System.Drawing.Point(100, 102);
+            this.btnEdit4.Name = "btnEdit4";
+            this.btnEdit4.Size = new System.Drawing.Size(68, 21);
+            this.btnEdit4.TabIndex = 5;
+            this.btnEdit4.Text = "Edit";
+            this.btnEdit4.UseVisualStyleBackColor = true;
+            this.btnEdit4.Click += new System.EventHandler(this.btnEdit4_Click);
             // 
             // panel5
             // 
@@ -364,42 +404,6 @@
             this.checkBoxNotify.UseVisualStyleBackColor = true;
             this.checkBoxNotify.CheckedChanged += new System.EventHandler(this.checkBoxNotify_CheckedChanged);
             // 
-            // btnExit2
-            // 
-            this.btnExit2.Location = new System.Drawing.Point(92, 102);
-            this.btnExit2.Name = "btnExit2";
-            this.btnExit2.Size = new System.Drawing.Size(68, 21);
-            this.btnExit2.TabIndex = 3;
-            this.btnExit2.Text = "Exit";
-            this.btnExit2.UseVisualStyleBackColor = true;
-            // 
-            // btnExit1
-            // 
-            this.btnExit1.Location = new System.Drawing.Point(100, 102);
-            this.btnExit1.Name = "btnExit1";
-            this.btnExit1.Size = new System.Drawing.Size(68, 21);
-            this.btnExit1.TabIndex = 4;
-            this.btnExit1.Text = "Exit";
-            this.btnExit1.UseVisualStyleBackColor = true;
-            // 
-            // btnExit4
-            // 
-            this.btnExit4.Location = new System.Drawing.Point(100, 102);
-            this.btnExit4.Name = "btnExit4";
-            this.btnExit4.Size = new System.Drawing.Size(68, 21);
-            this.btnExit4.TabIndex = 5;
-            this.btnExit4.Text = "Exit";
-            this.btnExit4.UseVisualStyleBackColor = true;
-            // 
-            // btnExit3
-            // 
-            this.btnExit3.Location = new System.Drawing.Point(92, 102);
-            this.btnExit3.Name = "btnExit3";
-            this.btnExit3.Size = new System.Drawing.Size(68, 21);
-            this.btnExit3.TabIndex = 6;
-            this.btnExit3.Text = "Exit";
-            this.btnExit3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,10 +462,10 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnExit3;
-        private System.Windows.Forms.Button btnExit2;
-        private System.Windows.Forms.Button btnExit1;
-        private System.Windows.Forms.Button btnExit4;
+        private System.Windows.Forms.Button btnEdit3;
+        private System.Windows.Forms.Button btnEdit2;
+        private System.Windows.Forms.Button btnEdit1;
+        private System.Windows.Forms.Button btnEdit4;
     }
 }
 

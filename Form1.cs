@@ -46,5 +46,25 @@ namespace Task_Manager
         {
 
         }
+
+        private void btnEdit2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
