@@ -30,145 +30,162 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxJob = new System.Windows.Forms.TextBox();
-            this.checkBoxDone = new System.Windows.Forms.CheckBox();
+            this.ckbDone = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.nmToMinute = new System.Windows.Forms.NumericUpDown();
+            this.nmToHour = new System.Windows.Forms.NumericUpDown();
+            this.nmFromMinute = new System.Windows.Forms.NumericUpDown();
+            this.nmFromHour = new System.Windows.Forms.NumericUpDown();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmToMinute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmToHour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFromMinute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFromHour)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBoxJob);
-            this.panel1.Controls.Add(this.checkBoxDone);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Controls.Add(this.ckbDone);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 30);
+            this.panel1.Size = new System.Drawing.Size(393, 37);
             this.panel1.TabIndex = 0;
             // 
             // textBoxJob
             // 
-            this.textBoxJob.Location = new System.Drawing.Point(25, 3);
+            this.textBoxJob.Location = new System.Drawing.Point(33, 4);
+            this.textBoxJob.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxJob.Name = "textBoxJob";
-            this.textBoxJob.Size = new System.Drawing.Size(265, 20);
+            this.textBoxJob.Size = new System.Drawing.Size(352, 22);
             this.textBoxJob.TabIndex = 1;
             // 
-            // checkBoxDone
+            // ckbDone
             // 
-            this.checkBoxDone.AutoSize = true;
-            this.checkBoxDone.Location = new System.Drawing.Point(5, 6);
-            this.checkBoxDone.Name = "checkBoxDone";
-            this.checkBoxDone.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDone.TabIndex = 0;
-            this.checkBoxDone.UseVisualStyleBackColor = true;
+            this.ckbDone.AutoSize = true;
+            this.ckbDone.Location = new System.Drawing.Point(7, 7);
+            this.ckbDone.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbDone.Name = "ckbDone";
+            this.ckbDone.Size = new System.Drawing.Size(18, 17);
+            this.ckbDone.TabIndex = 0;
+            this.ckbDone.UseVisualStyleBackColor = true;
+            this.ckbDone.CheckedChanged += new System.EventHandler(this.ckbDone_CheckedChanged);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.numericUpDown4);
-            this.panel2.Controls.Add(this.numericUpDown3);
-            this.panel2.Controls.Add(this.numericUpDown2);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Location = new System.Drawing.Point(298, 3);
+            this.panel2.Controls.Add(this.nmToMinute);
+            this.panel2.Controls.Add(this.nmToHour);
+            this.panel2.Controls.Add(this.nmFromMinute);
+            this.panel2.Controls.Add(this.nmFromHour);
+            this.panel2.Location = new System.Drawing.Point(397, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(234, 30);
+            this.panel2.Size = new System.Drawing.Size(312, 37);
             this.panel2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 8);
+            this.label1.Location = new System.Drawing.Point(143, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.Size = new System.Drawing.Size(20, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "to";
             // 
-            // numericUpDown4
+            // nmToMinute
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(180, 5);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown4.TabIndex = 3;
+            this.nmToMinute.Location = new System.Drawing.Point(240, 6);
+            this.nmToMinute.Margin = new System.Windows.Forms.Padding(4);
+            this.nmToMinute.Name = "nmToMinute";
+            this.nmToMinute.Size = new System.Drawing.Size(63, 22);
+            this.nmToMinute.TabIndex = 3;
             // 
-            // numericUpDown3
+            // nmToHour
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(126, 5);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown3.TabIndex = 2;
+            this.nmToHour.Location = new System.Drawing.Point(168, 6);
+            this.nmToHour.Margin = new System.Windows.Forms.Padding(4);
+            this.nmToHour.Name = "nmToHour";
+            this.nmToHour.Size = new System.Drawing.Size(63, 22);
+            this.nmToHour.TabIndex = 2;
             // 
-            // numericUpDown2
+            // nmFromMinute
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(56, 5);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown2.TabIndex = 1;
+            this.nmFromMinute.Location = new System.Drawing.Point(75, 6);
+            this.nmFromMinute.Margin = new System.Windows.Forms.Padding(4);
+            this.nmFromMinute.Name = "nmFromMinute";
+            this.nmFromMinute.Size = new System.Drawing.Size(63, 22);
+            this.nmFromMinute.TabIndex = 1;
             // 
-            // numericUpDown1
+            // nmFromHour
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 5);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
-            this.numericUpDown1.TabIndex = 0;
+            this.nmFromHour.Location = new System.Drawing.Point(4, 6);
+            this.nmFromHour.Margin = new System.Windows.Forms.Padding(4);
+            this.nmFromHour.Name = "nmFromHour";
+            this.nmFromHour.Size = new System.Drawing.Size(63, 22);
+            this.nmFromHour.TabIndex = 0;
             // 
-            // comboBox1
+            // cbStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(537, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(716, 7);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(143, 24);
+            this.cbStatus.TabIndex = 3;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
-            // btnEdit
+            // btnSave
             // 
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEdit.Location = new System.Drawing.Point(651, 6);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(47, 23);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSave.Location = new System.Drawing.Point(868, 5);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(63, 28);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(704, 6);
+            this.btnDelete.Location = new System.Drawing.Point(939, 5);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 23);
+            this.btnDelete.Size = new System.Drawing.Size(63, 28);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // UserControlJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlJob";
-            this.Size = new System.Drawing.Size(757, 33);
+            this.Size = new System.Drawing.Size(1009, 41);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmToMinute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmToHour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFromMinute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFromHour)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,15 +194,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxJob;
-        private System.Windows.Forms.CheckBox checkBoxDone;
+        private System.Windows.Forms.CheckBox ckbDone;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.NumericUpDown nmToMinute;
+        private System.Windows.Forms.NumericUpDown nmToHour;
+        private System.Windows.Forms.NumericUpDown nmFromMinute;
+        private System.Windows.Forms.NumericUpDown nmFromHour;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -10,3 +10,15 @@ D:\UIT\LTTQ\Task-Manager\obj\Debug\Task-Manager.exe
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task-Manager.pdb
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.DailyPlan.resources
 D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.UserControlJob.resources
+E:\Task-Manager\bin\Debug\Task-Manager.exe.config
+E:\Task-Manager\bin\Debug\Task-Manager.exe
+E:\Task-Manager\bin\Debug\Task-Manager.pdb
+E:\Task-Manager\obj\Debug\Task-Manager.csprojResolveAssemblyReference.cache
+E:\Task-Manager\obj\Debug\Task_Manager.DailyPlan.resources
+E:\Task-Manager\obj\Debug\Task_Manager.Form1.resources
+E:\Task-Manager\obj\Debug\Task_Manager.Properties.Resources.resources
+E:\Task-Manager\obj\Debug\Task_Manager.UserControlJob.resources
+E:\Task-Manager\obj\Debug\Task-Manager.csproj.GenerateResource.Cache
+E:\Task-Manager\obj\Debug\Task-Manager.csproj.CoreCompileInputs.cache
+E:\Task-Manager\obj\Debug\Task-Manager.exe
+E:\Task-Manager\obj\Debug\Task-Manager.pdb

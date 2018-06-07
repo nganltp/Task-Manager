@@ -12,59 +12,15 @@ namespace Task_Manager
 {
     public partial class Form1 : Form
     {
+        private PlanData job;
+
+        public PlanData Job { get => job; set => job = value; }
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void checkBoxNotify_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEdit2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEdit1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEdit3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEdit4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
