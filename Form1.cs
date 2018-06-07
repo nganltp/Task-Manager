@@ -16,6 +16,9 @@ namespace Task_Manager
         {
             InitializeComponent();
         }
+        private PlanData job;
+
+        public PlanData Job { get => job; set => job = value; }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {

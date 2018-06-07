@@ -30,12 +30,13 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddJob = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labJob = new System.Windows.Forms.Label();
-            this.btnView = new System.Windows.Forms.Button();
             this.labDaily = new System.Windows.Forms.Label();
+            this.btnView = new System.Windows.Forms.Button();
+            this.labJob = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnAddJob = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,28 +62,24 @@
             this.panel2.Size = new System.Drawing.Size(820, 48);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
+            // labDaily
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 365);
-            this.panel1.TabIndex = 0;
+            this.labDaily.AutoSize = true;
+            this.labDaily.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDaily.Location = new System.Drawing.Point(178, 3);
+            this.labDaily.Name = "labDaily";
+            this.labDaily.Size = new System.Drawing.Size(174, 44);
+            this.labDaily.TabIndex = 4;
+            this.labDaily.Text = "Daily Plan";
             // 
-            // btnAddJob
+            // btnView
             // 
-            this.btnAddJob.Location = new System.Drawing.Point(3, 3);
-            this.btnAddJob.Name = "btnAddJob";
-            this.btnAddJob.Size = new System.Drawing.Size(92, 42);
-            this.btnAddJob.TabIndex = 0;
-            this.btnAddJob.Text = "Add Job";
-            this.btnAddJob.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(531, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.btnView.Location = new System.Drawing.Point(737, 8);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(70, 32);
+            this.btnView.TabIndex = 3;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
             // 
             // labJob
             // 
@@ -96,30 +93,44 @@
             this.labJob.TabIndex = 2;
             this.labJob.Text = "Job of day:";
             // 
-            // btnView
+            // dateTimePicker1
             // 
-            this.btnView.Location = new System.Drawing.Point(737, 8);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(70, 32);
-            this.btnView.TabIndex = 3;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(531, 14);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // labDaily
+            // btnAddJob
             // 
-            this.labDaily.AutoSize = true;
-            this.labDaily.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDaily.Location = new System.Drawing.Point(178, 3);
-            this.labDaily.Name = "labDaily";
-            this.labDaily.Size = new System.Drawing.Size(174, 44);
-            this.labDaily.TabIndex = 4;
-            this.labDaily.Text = "Daily Plan";
+            this.btnAddJob.Location = new System.Drawing.Point(3, 3);
+            this.btnAddJob.Name = "btnAddJob";
+            this.btnAddJob.Size = new System.Drawing.Size(92, 42);
+            this.btnAddJob.TabIndex = 0;
+            this.btnAddJob.Text = "Add Job";
+            this.btnAddJob.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 365);
+            this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(759, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // DailyPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 511);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelMenu);
             this.Name = "DailyPlan";
             this.Text = "DailyPlan";
@@ -140,5 +151,6 @@
         private System.Windows.Forms.Label labDaily;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label labJob;
+        private System.Windows.Forms.Button button1;
     }
 }
