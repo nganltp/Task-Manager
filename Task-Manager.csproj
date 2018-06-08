@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cons.cs" />
     <Compile Include="DailyPlan.cs">
       <SubType>Form</SubType>
     </Compile>

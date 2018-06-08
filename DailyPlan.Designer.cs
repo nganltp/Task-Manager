@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labDaily = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.labJob = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
             this.btnAddJob = new System.Windows.Forms.Button();
             this.jobPanel = new System.Windows.Forms.Panel();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.jobPanel.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -57,7 +60,7 @@
             this.panel2.Controls.Add(this.labDaily);
             this.panel2.Controls.Add(this.btnView);
             this.panel2.Controls.Add(this.labJob);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpkDate);
             this.panel2.Controls.Add(this.btnAddJob);
             this.panel2.Location = new System.Drawing.Point(4, 17);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -100,14 +103,15 @@
             this.labJob.TabIndex = 2;
             this.labJob.Text = "Job of day:";
             // 
-            // dateTimePicker1
+            // dtpkDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(708, 17);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.Value = new System.DateTime(2018, 6, 7, 9, 33, 13, 0);
+            this.dtpkDate.Location = new System.Drawing.Point(708, 17);
+            this.dtpkDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpkDate.Name = "dtpkDate";
+            this.dtpkDate.Size = new System.Drawing.Size(265, 22);
+            this.dtpkDate.TabIndex = 1;
+            this.dtpkDate.Value = new System.DateTime(2018, 6, 7, 9, 33, 13, 0);
+            this.dtpkDate.ValueChanged += new System.EventHandler(this.dtpkDate_ValueChanged);
             // 
             // btnAddJob
             // 
@@ -122,30 +126,59 @@
             // 
             // jobPanel
             // 
+            this.jobPanel.Controls.Add(this.menuStrip1);
             this.jobPanel.Location = new System.Drawing.Point(4, 84);
             this.jobPanel.Margin = new System.Windows.Forms.Padding(4);
             this.jobPanel.Name = "jobPanel";
             this.jobPanel.Size = new System.Drawing.Size(1093, 449);
             this.jobPanel.TabIndex = 0;
             // 
-            // notifyIcon1
+            // menuStrip1
             // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1093, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1132, 25);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // DailyPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 629);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panelMenu);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DailyPlan";
             this.Text = "DailyPlan";
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.jobPanel.ResumeLayout(false);
+            this.jobPanel.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,11 +187,13 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel jobPanel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpkDate;
         private System.Windows.Forms.Button btnAddJob;
         private System.Windows.Forms.Label labDaily;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label labJob;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,13 +57,16 @@
             this.vScrollBar5 = new System.Windows.Forms.VScrollBar();
             this.btnEdit4 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAllWork = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.viewListToday = new System.Windows.Forms.Label();
-            this.btnView = new System.Windows.Forms.Button();
+            this.btnTodayWork = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDownNotify = new System.Windows.Forms.NumericUpDown();
+            this.nmNotify = new System.Windows.Forms.NumericUpDown();
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
+            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
+            this.tmNotify = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.content.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -76,7 +80,7 @@
             this.task4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.title.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNotify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNotify)).BeginInit();
             this.SuspendLayout();
             // 
             // content
@@ -377,12 +381,13 @@
             // title
             // 
             this.title.BackColor = System.Drawing.Color.Gray;
-            this.title.Controls.Add(this.button1);
+            this.title.Controls.Add(this.dtpkDate);
+            this.title.Controls.Add(this.btnAllWork);
             this.title.Controls.Add(this.label7);
             this.title.Controls.Add(this.viewListToday);
-            this.title.Controls.Add(this.btnView);
+            this.title.Controls.Add(this.btnTodayWork);
             this.title.Controls.Add(this.label6);
-            this.title.Controls.Add(this.numericUpDownNotify);
+            this.title.Controls.Add(this.nmNotify);
             this.title.Controls.Add(this.checkBoxNotify);
             this.title.Location = new System.Drawing.Point(63, 20);
             this.title.Margin = new System.Windows.Forms.Padding(4);
@@ -390,18 +395,19 @@
             this.title.Size = new System.Drawing.Size(1065, 138);
             this.title.TabIndex = 1;
             // 
-            // button1
+            // btnAllWork
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(183, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "View";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAllWork.BackColor = System.Drawing.Color.Black;
+            this.btnAllWork.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllWork.ForeColor = System.Drawing.Color.White;
+            this.btnAllWork.Location = new System.Drawing.Point(183, 49);
+            this.btnAllWork.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAllWork.Name = "btnAllWork";
+            this.btnAllWork.Size = new System.Drawing.Size(83, 34);
+            this.btnAllWork.TabIndex = 6;
+            this.btnAllWork.Text = "View";
+            this.btnAllWork.UseVisualStyleBackColor = false;
+            this.btnAllWork.Click += new System.EventHandler(this.btnAllWork_Click);
             // 
             // label7
             // 
@@ -427,49 +433,50 @@
             this.viewListToday.TabIndex = 4;
             this.viewListToday.Text = "Only today:";
             // 
-            // btnView
+            // btnTodayWork
             // 
-            this.btnView.BackColor = System.Drawing.Color.Black;
-            this.btnView.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(183, 91);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(83, 34);
-            this.btnView.TabIndex = 3;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
+            this.btnTodayWork.BackColor = System.Drawing.Color.Black;
+            this.btnTodayWork.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodayWork.ForeColor = System.Drawing.Color.White;
+            this.btnTodayWork.Location = new System.Drawing.Point(183, 91);
+            this.btnTodayWork.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTodayWork.Name = "btnTodayWork";
+            this.btnTodayWork.Size = new System.Drawing.Size(83, 34);
+            this.btnTodayWork.TabIndex = 3;
+            this.btnTodayWork.Text = "View";
+            this.btnTodayWork.UseVisualStyleBackColor = false;
+            this.btnTodayWork.Click += new System.EventHandler(this.btnTodayWork_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poor Richard", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(481, 20);
+            this.label6.Location = new System.Drawing.Point(481, 5);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(471, 90);
             this.label6.TabIndex = 2;
             this.label6.Text = "Task Manager";
             // 
-            // numericUpDownNotify
+            // nmNotify
             // 
-            this.numericUpDownNotify.Location = new System.Drawing.Point(148, 10);
-            this.numericUpDownNotify.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDownNotify.Maximum = new decimal(new int[] {
+            this.nmNotify.Location = new System.Drawing.Point(148, 10);
+            this.nmNotify.Margin = new System.Windows.Forms.Padding(4);
+            this.nmNotify.Maximum = new decimal(new int[] {
             360,
             0,
             0,
             0});
-            this.numericUpDownNotify.Minimum = new decimal(new int[] {
+            this.nmNotify.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDownNotify.Name = "numericUpDownNotify";
-            this.numericUpDownNotify.Size = new System.Drawing.Size(129, 22);
-            this.numericUpDownNotify.TabIndex = 1;
-            this.numericUpDownNotify.Value = new decimal(new int[] {
+            this.nmNotify.Name = "nmNotify";
+            this.nmNotify.Size = new System.Drawing.Size(129, 22);
+            this.nmNotify.TabIndex = 1;
+            this.nmNotify.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -487,6 +494,23 @@
             this.checkBoxNotify.TabIndex = 0;
             this.checkBoxNotify.Text = "Notify";
             this.checkBoxNotify.UseVisualStyleBackColor = true;
+            this.checkBoxNotify.CheckedChanged += new System.EventHandler(this.checkBoxNotify_CheckedChanged);
+            // 
+            // dtpkDate
+            // 
+            this.dtpkDate.Location = new System.Drawing.Point(701, 113);
+            this.dtpkDate.Name = "dtpkDate";
+            this.dtpkDate.Size = new System.Drawing.Size(255, 22);
+            this.dtpkDate.TabIndex = 7;
+            // 
+            // tmNotify
+            // 
+            this.tmNotify.Tick += new System.EventHandler(this.tmNotify_Tick);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -497,6 +521,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Task Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.content.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -516,7 +542,7 @@
             this.panel5.PerformLayout();
             this.title.ResumeLayout(false);
             this.title.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNotify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNotify)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,7 +557,7 @@
         private System.Windows.Forms.Panel task1;
         private System.Windows.Forms.Panel task4;
         private System.Windows.Forms.Panel panelAllList;
-        private System.Windows.Forms.NumericUpDown numericUpDownNotify;
+        private System.Windows.Forms.NumericUpDown nmNotify;
         private System.Windows.Forms.CheckBox checkBoxNotify;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -545,8 +571,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label viewListToday;
-        private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTodayWork;
+        private System.Windows.Forms.Button btnAllWork;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnEdit3;
         private System.Windows.Forms.Button btnEdit2;
@@ -558,6 +584,9 @@
         private System.Windows.Forms.VScrollBar vScrollBar4;
         private System.Windows.Forms.VScrollBar vScrollBar5;
         private System.Windows.Forms.Button btnEdit5;
+        private System.Windows.Forms.DateTimePicker dtpkDate;
+        private System.Windows.Forms.Timer tmNotify;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

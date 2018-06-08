@@ -16,7 +16,7 @@ namespace Task_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DailyPlan());
+            Application.Run(new Form1());
         }
     }
 }

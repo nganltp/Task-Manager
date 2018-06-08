@@ -23,7 +23,6 @@ namespace Task_Manager
 
         FlowLayoutPanel panel = new FlowLayoutPanel();
 
-
         public DailyPlan(DateTime date, PlanData job)
         {
             InitializeComponent();
@@ -36,7 +35,11 @@ namespace Task_Manager
             jobPanel.Controls.Add(panel);
             panel.AutoScroll = true;
 
-            dateTimePicker1.Value = date;
+            dtpkDate.Value = Date;
+
+            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
 
@@ -70,6 +73,7 @@ namespace Task_Manager
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month
             && p.Date.Day == date.Day && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.DONE).ToList();
         }
+
         void showJobByDate(DateTime date)
         {
             panel.Controls.Clear();
@@ -88,6 +92,7 @@ namespace Task_Manager
             UserControlJob ajob = new UserControlJob(job);
             ajob.Edited += Ajob_Edited;
             ajob.Deleted += Ajob_Deleted;
+
             panel.Controls.Add(ajob);
 
         }
@@ -108,42 +113,71 @@ namespace Task_Manager
             dayJob.Deleted += Ajob_Deleted;
 
             panel.Controls.Remove(dayJob);
-
         }
+
         private void Ajob_Deleted(object sender, EventArgs e)
         {
             UserControlJob uc = sender as UserControlJob;
             PlanItem job = uc.Job;
             panel.Controls.Remove(uc);
             Job.ListJob.Remove(job);
+
+            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+
         }
 
         private void Ajob_Edited(object sender, EventArgs e)
         {
+            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Doing: "
-            // + JobDoing(dtpkDate.Value).Count + "|| Done: " + JobDone(dtpkDate.Value).Count
-            // + "|| Missed: " + JobMissed(dtpkDate.Value).Count + "|| Coming: " + JobComing(dtpkDate.Value).Count;
         }
-
 
         private void dtpkDate_ValueChanged(object sender, EventArgs e)
         {
-            showJobByDate((sender as DateTimePicker).Value);
+           // showJobByDate((sender as DateTimePicker).Value);
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Doing: "
-            //+ JobDoing(dtpkDate.Value).Count + "|| Done: " + JobDone(dtpkDate.Value).Count
-            //+ "|| Missed: " + JobMissed(dtpkDate.Value).Count + "|| Coming: " + JobComing(dtpkDate.Value).Count;
+            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+
         }
+
 
         private void btnAddJob_Click(object sender, EventArgs e)
         {
+            PlanItem item = new PlanItem() { Date = dtpkDate.Value };
+            Job.ListJob.Add(item);
+            AddJob(item);
 
+            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+
+        }
+
+        List<PlanItem> JobByMonth(DateTime date)
+        {
+            return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month).ToList();
+        }
+        List<PlanItem> JobByMonthDone(DateTime date)
+        {
+            return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.DONE).ToList();
+        }
+        List<PlanItem> JobByMonthMissed(DateTime date)
+        {
+            return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.MISSED).ToList();
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Tổng : " + JobByMonth(dtpkDate.Value).Count + " công việc\n"
+                + "Hoàn thành: " + JobByMonthDone(dtpkDate.Value).Count + " công việc\n"
+                + "Bỏ lỡ: " + JobByMonthMissed(dtpkDate.Value).Count + " công việc");
         }
+
     }
 }
