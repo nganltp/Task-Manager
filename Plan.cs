@@ -22,6 +22,7 @@ namespace Task_Manager
         public Point FromTime { get => fromTime; set => fromTime = value; }
         public Point ToTime { get => toTime; set => toTime = value; }
         public string Status { get => status; set => status = value; }
+        public DateTime Date { get => date; set => date = value; }
 
         public static List<string> listStatus = new List<string>() { "DONE", "DOING", "COMING", "MISSED" };
     }
