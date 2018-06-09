@@ -27,7 +27,8 @@ namespace Task_Manager
 
         public string Status { get => status; set => status = value; }
 
-        public static List<string> ListStatus = new List<string> { "EMERGENCY","IMPORTANT","NORMAL", "DONE","MISSED" };
+        public static List<string> ListStatus = new List<string> { "EMERGENCY",
+        "IMPORTANT","NORMAL", "DONE","MISSED" };
 
     }
     

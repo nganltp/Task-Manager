@@ -1,2 +1,18 @@
 <?xml version="1.0"?>
-<PlanData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:nil="true" />
+<PlanData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListJob>
+    <PlanItem>
+      <Date>2018-06-09T15:24:46.7212174+07:00</Date>
+      <Job>Di da bong</Job>
+      <ToTime>
+        <X>19</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>17</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>NORMAL</Status>
+    </PlanItem>
+  </ListJob>
+</PlanData>

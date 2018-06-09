@@ -57,6 +57,7 @@
             this.vScrollBar5 = new System.Windows.Forms.VScrollBar();
             this.btnEdit4 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Panel();
+            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
             this.btnAllWork = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.viewListToday = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nmNotify = new System.Windows.Forms.NumericUpDown();
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
-            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
             this.tmNotify = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.content.SuspendLayout();
@@ -395,6 +395,13 @@
             this.title.Size = new System.Drawing.Size(1065, 138);
             this.title.TabIndex = 1;
             // 
+            // dtpkDate
+            // 
+            this.dtpkDate.Location = new System.Drawing.Point(701, 113);
+            this.dtpkDate.Name = "dtpkDate";
+            this.dtpkDate.Size = new System.Drawing.Size(255, 22);
+            this.dtpkDate.TabIndex = 7;
+            // 
             // btnAllWork
             // 
             this.btnAllWork.BackColor = System.Drawing.Color.Black;
@@ -407,7 +414,6 @@
             this.btnAllWork.TabIndex = 6;
             this.btnAllWork.Text = "View";
             this.btnAllWork.UseVisualStyleBackColor = false;
-            this.btnAllWork.Click += new System.EventHandler(this.btnAllWork_Click);
             // 
             // label7
             // 
@@ -481,6 +487,8 @@
             0,
             0,
             0});
+            this.nmNotify.Visible = false;
+            this.nmNotify.ValueChanged += new System.EventHandler(this.nmNotify_ValueChanged);
             // 
             // checkBoxNotify
             // 
@@ -495,13 +503,6 @@
             this.checkBoxNotify.Text = "Notify";
             this.checkBoxNotify.UseVisualStyleBackColor = true;
             this.checkBoxNotify.CheckedChanged += new System.EventHandler(this.checkBoxNotify_CheckedChanged);
-            // 
-            // dtpkDate
-            // 
-            this.dtpkDate.Location = new System.Drawing.Point(701, 113);
-            this.dtpkDate.Name = "dtpkDate";
-            this.dtpkDate.Size = new System.Drawing.Size(255, 22);
-            this.dtpkDate.TabIndex = 7;
             // 
             // tmNotify
             // 

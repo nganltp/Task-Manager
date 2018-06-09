@@ -16,7 +16,6 @@ namespace Task_Manager
     {
 #region Properties
         private PlanData job;
-
         public PlanData Job { get => job; set => job = value; }
 
         private PlanItem ajob;
@@ -39,9 +38,23 @@ namespace Task_Manager
             }
             catch
             {
-                
+                //SetDefaultData();
             }
         }
+
+        //void SetDefaultData()
+        //{
+        //    Job = new PlanData();
+        //    Job.ListJob = new List<PlanItem>();
+        //    Job.ListJob.Add(new PlanItem()
+        //    {
+        //        Date = DateTime.Now,
+        //        FromTime = new Point(17, 0),
+        //        ToTime = new Point(19, 0),
+        //        Job = "Di da bong",
+        //        Status = PlanItem.ListStatus[(int)EPlanItem.NORMAL]
+        //    });
+        //}
 
         void DefautDate()
         {
@@ -51,12 +64,6 @@ namespace Task_Manager
         List<PlanItem> JobByDay(DateTime date)
         {
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && p.Date.Day == date.Day).ToList();
-        }
-
-        private void btnAllWork_Click(object sender, EventArgs e)
-        {
-            DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job);
-            daily.ShowDialog();
         }
         
         private void btnTodayWork_Click(object sender, EventArgs e)
@@ -108,6 +115,7 @@ namespace Task_Manager
                 return;
             if (Job == null || Job.ListJob == null || Job.ListJob.Count == 0)
                 return;
+
             DateTime current = DateTime.Now;
             DateTime tomorrow = DateTime.Now.AddDays(1);
 
@@ -158,7 +166,15 @@ namespace Task_Manager
 
         private void checkBoxNotify_CheckedChanged(object sender, EventArgs e)
         {
-            nmNotify.Enabled = checkBoxNotify.Checked;
+            if (checkBoxNotify.Checked != null)
+            {
+                nmNotify.Visible = true;
+                nmNotify.Enabled = checkBoxNotify.Checked;
+            }
+        }
+        private void nmNotify_ValueChanged(object sender, EventArgs e)
+        {
+            Cons.notifyTime = (int)nmNotify.Value;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -178,5 +194,6 @@ namespace Task_Manager
         {
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.MISSED).ToList();
         }
+
     }
 }

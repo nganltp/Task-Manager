@@ -37,9 +37,9 @@ namespace Task_Manager
 
             dtpkDate.Value = Date;
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
-            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
-            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+            toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            + JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            + " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
 
@@ -94,7 +94,6 @@ namespace Task_Manager
             ajob.Deleted += Ajob_Deleted;
 
             panel.Controls.Add(ajob);
-
         }
         void DeleteJob(PlanItem job)
         {
@@ -122,30 +121,29 @@ namespace Task_Manager
             panel.Controls.Remove(uc);
             Job.ListJob.Remove(job);
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
-            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
-            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+            toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            + JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            + " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
 
         private void Ajob_Edited(object sender, EventArgs e)
         {
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
-            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
-            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+            toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            + JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            + " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
 
         private void dtpkDate_ValueChanged(object sender, EventArgs e)
         {
-           // showJobByDate((sender as DateTimePicker).Value);
+            showJobByDate((sender as DateTimePicker).Value);
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
-            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
-            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+            toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            + JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            + " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
-
 
         private void btnAddJob_Click(object sender, EventArgs e)
         {
@@ -153,9 +151,9 @@ namespace Task_Manager
             Job.ListJob.Add(item);
             AddJob(item);
 
-            //toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
-            //+ JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
-            //+ " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
+            toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "
+            + JobEmergency(dtpkDate.Value).Count + " || Important: " + JobImportant(dtpkDate.Value).Count
+            + " || Normal: " + JobNormal(dtpkDate.Value).Count + " || Missed: " + JobMissed(dtpkDate.Value).Count + " || Done: " + JobDone(dtpkDate.Value).Count;
 
         }
 

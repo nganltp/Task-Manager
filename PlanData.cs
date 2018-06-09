@@ -11,6 +11,6 @@ namespace Task_Manager
     {
         private List<PlanItem> listjob;
 
-        internal List<PlanItem> ListJob { get => listjob; set => listjob = value; }
+        public List<PlanItem> ListJob { get => listjob; set => listjob = value; }
     }
 }

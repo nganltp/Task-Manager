@@ -35,13 +35,12 @@
             this.labJob = new System.Windows.Forms.Label();
             this.dtpkDate = new System.Windows.Forms.DateTimePicker();
             this.btnAddJob = new System.Windows.Forms.Button();
-            this.jobPanel = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.jobPanel = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.jobPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +48,10 @@
             // 
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.jobPanel);
-            this.panelMenu.Location = new System.Drawing.Point(15, 15);
+            this.panelMenu.Location = new System.Drawing.Point(15, 28);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1101, 576);
+            this.panelMenu.Size = new System.Drawing.Size(1101, 563);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
@@ -124,24 +123,6 @@
             this.btnAddJob.UseVisualStyleBackColor = true;
             this.btnAddJob.Click += new System.EventHandler(this.btnAddJob_Click);
             // 
-            // jobPanel
-            // 
-            this.jobPanel.Controls.Add(this.menuStrip1);
-            this.jobPanel.Location = new System.Drawing.Point(4, 84);
-            this.jobPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.jobPanel.Name = "jobPanel";
-            this.jobPanel.Size = new System.Drawing.Size(1093, 449);
-            this.jobPanel.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1093, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -159,22 +140,37 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // jobPanel
+            // 
+            this.jobPanel.Location = new System.Drawing.Point(4, 81);
+            this.jobPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.jobPanel.Name = "jobPanel";
+            this.jobPanel.Size = new System.Drawing.Size(1093, 478);
+            this.jobPanel.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // DailyPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 629);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelMenu);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DailyPlan";
             this.Text = "DailyPlan";
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.jobPanel.ResumeLayout(false);
-            this.jobPanel.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -186,14 +182,14 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel jobPanel;
         private System.Windows.Forms.DateTimePicker dtpkDate;
         private System.Windows.Forms.Button btnAddJob;
         private System.Windows.Forms.Label labDaily;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label labJob;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Panel jobPanel;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
