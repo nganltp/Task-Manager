@@ -66,12 +66,6 @@ namespace Task_Manager
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && p.Date.Day == date.Day).ToList();
         }
         
-        private void btnTodayWork_Click(object sender, EventArgs e)
-        {
-            dtpkDate.Value = DateTime.Now;
-            DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job);
-            daily.ShowDialog();
-        }
 
         private void SerializeToXML(object data, string filepath)
         {
@@ -117,13 +111,12 @@ namespace Task_Manager
                 return;
 
             DateTime current = DateTime.Now;
-            DateTime tomorrow = DateTime.Now.AddDays(1);
 
             if (dtpkDate.Value.Year != current.Year || dtpkDate.Value.Month != current.Month || dtpkDate.Value.Day != current.Day)
                 return;
             for (int i = 0; i < Job.ListJob.Count; i++)
             {
-                if (Job.ListJob[i].ToTime.X * 3600 + Job.ListJob[i].ToTime.Y * 60 < current.Hour * 3600 + current.Minute * 60
+                if ((Job.ListJob[i].ToTime.X * 3600 + Job.ListJob[i].ToTime.Y * 60) < (current.Hour * 3600 + current.Minute * 60)
                     && Job.ListJob[i].Status != "DONE" && Job.ListJob[i].Date.Year == current.Year
                     && Job.ListJob[i].Date.Month == current.Month && Job.ListJob[i].Date.Day == current.Day
                     && Job.ListJob[i].Job != null)
@@ -202,6 +195,18 @@ namespace Task_Manager
             this.ShowInTaskbar = true;
             DailyPlan plan = new DailyPlan(dtpkDate.Value, Job);
             plan.Show();
+        }
+        
+        private void btnTodayWork_Click(object sender, EventArgs e)
+        {
+            dtpkDate.Value = DateTime.Now;
+            DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job);
+            daily.ShowDialog();
+        }
+
+        private void btnNormalJob_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

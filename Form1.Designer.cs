@@ -38,7 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panelNormalJob = new System.Windows.Forms.Panel();
             this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
-            this.btnEdit3 = new System.Windows.Forms.Button();
+            this.btnNormalJob = new System.Windows.Forms.Button();
             this.panelAllJob = new System.Windows.Forms.Panel();
             this.btnEdit5 = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
@@ -46,18 +46,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelImportantJob = new System.Windows.Forms.Panel();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
-            this.btnEdit2 = new System.Windows.Forms.Button();
+            this.btnImportantJob = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panelEmergencyJob = new System.Windows.Forms.Panel();
             this.vScrollBar4 = new System.Windows.Forms.VScrollBar();
-            this.btnEdit1 = new System.Windows.Forms.Button();
+            this.btnEmergencyJob = new System.Windows.Forms.Button();
             this.panelMissedJob = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.vScrollBar5 = new System.Windows.Forms.VScrollBar();
-            this.btnEdit4 = new System.Windows.Forms.Button();
+            this.btnMissedJob = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.dtpkDate = new System.Windows.Forms.DateTimePicker();
             this.btnAllWork = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,7 +69,6 @@
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
             this.tmNotify = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label8 = new System.Windows.Forms.Label();
             this.content.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -90,10 +90,10 @@
             this.content.BackColor = System.Drawing.Color.Olive;
             this.content.Controls.Add(this.panel1);
             this.content.Controls.Add(this.title);
-            this.content.Location = new System.Drawing.Point(16, 15);
+            this.content.Location = new System.Drawing.Point(-1, 0);
             this.content.Margin = new System.Windows.Forms.Padding(4);
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(1173, 542);
+            this.content.Size = new System.Drawing.Size(1206, 571);
             this.content.TabIndex = 0;
             // 
             // panel1
@@ -165,7 +165,7 @@
             this.panelNormalJob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelNormalJob.BackColor = System.Drawing.Color.Green;
             this.panelNormalJob.Controls.Add(this.vScrollBar3);
-            this.panelNormalJob.Controls.Add(this.btnEdit3);
+            this.panelNormalJob.Controls.Add(this.btnNormalJob);
             this.panelNormalJob.Location = new System.Drawing.Point(400, 195);
             this.panelNormalJob.Margin = new System.Windows.Forms.Padding(4);
             this.panelNormalJob.Name = "panelNormalJob";
@@ -179,16 +179,17 @@
             this.vScrollBar3.Size = new System.Drawing.Size(21, 123);
             this.vScrollBar3.TabIndex = 5;
             // 
-            // btnEdit3
+            // btnNormalJob
             // 
-            this.btnEdit3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit3.Location = new System.Drawing.Point(123, 130);
-            this.btnEdit3.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit3.Name = "btnEdit3";
-            this.btnEdit3.Size = new System.Drawing.Size(91, 26);
-            this.btnEdit3.TabIndex = 6;
-            this.btnEdit3.Text = "Edit";
-            this.btnEdit3.UseVisualStyleBackColor = false;
+            this.btnNormalJob.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNormalJob.Location = new System.Drawing.Point(123, 130);
+            this.btnNormalJob.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNormalJob.Name = "btnNormalJob";
+            this.btnNormalJob.Size = new System.Drawing.Size(91, 26);
+            this.btnNormalJob.TabIndex = 6;
+            this.btnNormalJob.Text = "Edit";
+            this.btnNormalJob.UseVisualStyleBackColor = false;
+            this.btnNormalJob.Click += new System.EventHandler(this.btnNormalJob_Click);
             // 
             // panelAllJob
             // 
@@ -247,7 +248,7 @@
             this.panelImportantJob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelImportantJob.BackColor = System.Drawing.Color.Goldenrod;
             this.panelImportantJob.Controls.Add(this.vScrollBar2);
-            this.panelImportantJob.Controls.Add(this.btnEdit2);
+            this.panelImportantJob.Controls.Add(this.btnImportantJob);
             this.panelImportantJob.Controls.Add(this.panel2);
             this.panelImportantJob.Location = new System.Drawing.Point(400, 4);
             this.panelImportantJob.Margin = new System.Windows.Forms.Padding(4);
@@ -262,16 +263,16 @@
             this.vScrollBar2.Size = new System.Drawing.Size(21, 123);
             this.vScrollBar2.TabIndex = 4;
             // 
-            // btnEdit2
+            // btnImportantJob
             // 
-            this.btnEdit2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit2.Location = new System.Drawing.Point(123, 135);
-            this.btnEdit2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit2.Name = "btnEdit2";
-            this.btnEdit2.Size = new System.Drawing.Size(91, 26);
-            this.btnEdit2.TabIndex = 3;
-            this.btnEdit2.Text = "Edit";
-            this.btnEdit2.UseVisualStyleBackColor = false;
+            this.btnImportantJob.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImportantJob.Location = new System.Drawing.Point(123, 135);
+            this.btnImportantJob.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImportantJob.Name = "btnImportantJob";
+            this.btnImportantJob.Size = new System.Drawing.Size(91, 26);
+            this.btnImportantJob.TabIndex = 3;
+            this.btnImportantJob.Text = "Edit";
+            this.btnImportantJob.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -300,7 +301,7 @@
             this.panelEmergencyJob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelEmergencyJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelEmergencyJob.Controls.Add(this.vScrollBar4);
-            this.panelEmergencyJob.Controls.Add(this.btnEdit1);
+            this.panelEmergencyJob.Controls.Add(this.btnEmergencyJob);
             this.panelEmergencyJob.Location = new System.Drawing.Point(755, 13);
             this.panelEmergencyJob.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmergencyJob.Name = "panelEmergencyJob";
@@ -314,16 +315,16 @@
             this.vScrollBar4.Size = new System.Drawing.Size(21, 125);
             this.vScrollBar4.TabIndex = 7;
             // 
-            // btnEdit1
+            // btnEmergencyJob
             // 
-            this.btnEdit1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit1.Location = new System.Drawing.Point(133, 126);
-            this.btnEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit1.Name = "btnEdit1";
-            this.btnEdit1.Size = new System.Drawing.Size(91, 26);
-            this.btnEdit1.TabIndex = 4;
-            this.btnEdit1.Text = "Edit";
-            this.btnEdit1.UseVisualStyleBackColor = false;
+            this.btnEmergencyJob.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEmergencyJob.Location = new System.Drawing.Point(133, 126);
+            this.btnEmergencyJob.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmergencyJob.Name = "btnEmergencyJob";
+            this.btnEmergencyJob.Size = new System.Drawing.Size(91, 26);
+            this.btnEmergencyJob.TabIndex = 4;
+            this.btnEmergencyJob.Text = "Edit";
+            this.btnEmergencyJob.UseVisualStyleBackColor = false;
             // 
             // panelMissedJob
             // 
@@ -331,7 +332,7 @@
             this.panelMissedJob.BackColor = System.Drawing.Color.Purple;
             this.panelMissedJob.Controls.Add(this.panel5);
             this.panelMissedJob.Controls.Add(this.vScrollBar5);
-            this.panelMissedJob.Controls.Add(this.btnEdit4);
+            this.panelMissedJob.Controls.Add(this.btnMissedJob);
             this.panelMissedJob.Location = new System.Drawing.Point(755, 192);
             this.panelMissedJob.Margin = new System.Windows.Forms.Padding(4);
             this.panelMissedJob.Name = "panelMissedJob";
@@ -369,16 +370,16 @@
             this.vScrollBar5.Size = new System.Drawing.Size(21, 131);
             this.vScrollBar5.TabIndex = 8;
             // 
-            // btnEdit4
+            // btnMissedJob
             // 
-            this.btnEdit4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit4.Location = new System.Drawing.Point(133, 134);
-            this.btnEdit4.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit4.Name = "btnEdit4";
-            this.btnEdit4.Size = new System.Drawing.Size(91, 26);
-            this.btnEdit4.TabIndex = 5;
-            this.btnEdit4.Text = "Edit";
-            this.btnEdit4.UseVisualStyleBackColor = false;
+            this.btnMissedJob.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMissedJob.Location = new System.Drawing.Point(133, 134);
+            this.btnMissedJob.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMissedJob.Name = "btnMissedJob";
+            this.btnMissedJob.Size = new System.Drawing.Size(91, 26);
+            this.btnMissedJob.TabIndex = 5;
+            this.btnMissedJob.Text = "Edit";
+            this.btnMissedJob.UseVisualStyleBackColor = false;
             // 
             // title
             // 
@@ -397,6 +398,17 @@
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(1065, 138);
             this.title.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(230, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "(seconds)";
             // 
             // dtpkDate
             // 
@@ -509,7 +521,7 @@
             // 
             // tmNotify
             // 
-            this.tmNotify.Interval = 1000;
+            this.tmNotify.Interval = 10000;
             this.tmNotify.Tick += new System.EventHandler(this.tmNotify_Tick);
             // 
             // notifyIcon
@@ -518,17 +530,6 @@
             this.notifyIcon.Text = "notifyIcon1";
             this.notifyIcon.Visible = true;
             this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(230, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "(seconds)";
             // 
             // Form1
             // 
@@ -593,10 +594,10 @@
         private System.Windows.Forms.Button btnTodayWork;
         private System.Windows.Forms.Button btnAllWork;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnEdit3;
-        private System.Windows.Forms.Button btnEdit2;
-        private System.Windows.Forms.Button btnEdit1;
-        private System.Windows.Forms.Button btnEdit4;
+        private System.Windows.Forms.Button btnNormalJob;
+        private System.Windows.Forms.Button btnImportantJob;
+        private System.Windows.Forms.Button btnEmergencyJob;
+        private System.Windows.Forms.Button btnMissedJob;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.VScrollBar vScrollBar3;
         private System.Windows.Forms.VScrollBar vScrollBar2;
