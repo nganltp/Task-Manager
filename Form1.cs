@@ -160,7 +160,7 @@ namespace Task_Manager
                 tam += " - " + listTodayDoing[i].Job + "\n";
             }
 
-            notifyIcon1.ShowBalloonTip(Cons.TimeOut, "Lịch công việc",
+            notifyIcon.ShowBalloonTip(Cons.TimeOut, "Lịch công việc",
             string.Format("Bạn đang có {0} công việc cần làm: \n", listTodayDoing.Count) + tam, ToolTipIcon.Info);
         }
 
@@ -175,6 +175,7 @@ namespace Task_Manager
         private void nmNotify_ValueChanged(object sender, EventArgs e)
         {
             Cons.notifyTime = (int)nmNotify.Value;
+            tmNotify.Interval = (int)nmNotify.Value * tmNotify.Interval;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -195,5 +196,12 @@ namespace Task_Manager
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.MISSED).ToList();
         }
 
+        private void notifyIcon_BalloonTipClicked(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            this.ShowInTaskbar = true;
+            DailyPlan plan = new DailyPlan(dtpkDate.Value, Job);
+            plan.Show();
+        }
     }
 }

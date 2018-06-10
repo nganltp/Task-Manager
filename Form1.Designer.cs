@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.task3 = new System.Windows.Forms.Panel();
+            this.panelNormalJob = new System.Windows.Forms.Panel();
             this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
             this.btnEdit3 = new System.Windows.Forms.Button();
-            this.panelAllList = new System.Windows.Forms.Panel();
+            this.panelAllJob = new System.Windows.Forms.Panel();
             this.btnEdit5 = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.task2 = new System.Windows.Forms.Panel();
+            this.panelImportantJob = new System.Windows.Forms.Panel();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.btnEdit2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.task1 = new System.Windows.Forms.Panel();
+            this.panelEmergencyJob = new System.Windows.Forms.Panel();
             this.vScrollBar4 = new System.Windows.Forms.VScrollBar();
             this.btnEdit1 = new System.Windows.Forms.Button();
-            this.task4 = new System.Windows.Forms.Panel();
+            this.panelMissedJob = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.vScrollBar5 = new System.Windows.Forms.VScrollBar();
@@ -66,18 +67,19 @@
             this.nmNotify = new System.Windows.Forms.NumericUpDown();
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
             this.tmNotify = new System.Windows.Forms.Timer(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.content.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.task3.SuspendLayout();
-            this.panelAllList.SuspendLayout();
+            this.panelNormalJob.SuspendLayout();
+            this.panelAllJob.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.task2.SuspendLayout();
+            this.panelImportantJob.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.task1.SuspendLayout();
-            this.task4.SuspendLayout();
+            this.panelEmergencyJob.SuspendLayout();
+            this.panelMissedJob.SuspendLayout();
             this.panel5.SuspendLayout();
             this.title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmNotify)).BeginInit();
@@ -85,7 +87,7 @@
             // 
             // content
             // 
-            this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.content.BackColor = System.Drawing.Color.Olive;
             this.content.Controls.Add(this.panel1);
             this.content.Controls.Add(this.title);
             this.content.Location = new System.Drawing.Point(16, 15);
@@ -96,15 +98,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.Olive;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.task3);
-            this.panel1.Controls.Add(this.panelAllList);
+            this.panel1.Controls.Add(this.panelNormalJob);
+            this.panel1.Controls.Add(this.panelAllJob);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.task2);
-            this.panel1.Controls.Add(this.task1);
-            this.panel1.Controls.Add(this.task4);
+            this.panel1.Controls.Add(this.panelImportantJob);
+            this.panel1.Controls.Add(this.panelEmergencyJob);
+            this.panel1.Controls.Add(this.panelMissedJob);
             this.panel1.Location = new System.Drawing.Point(33, 168);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -143,7 +145,7 @@
             this.panel6.Location = new System.Drawing.Point(31, 4);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(348, 36);
+            this.panel6.Size = new System.Drawing.Size(341, 36);
             this.panel6.TabIndex = 3;
             // 
             // label5
@@ -158,17 +160,17 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "To Do List";
             // 
-            // task3
+            // panelNormalJob
             // 
-            this.task3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.task3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
-            this.task3.Controls.Add(this.vScrollBar3);
-            this.task3.Controls.Add(this.btnEdit3);
-            this.task3.Location = new System.Drawing.Point(400, 195);
-            this.task3.Margin = new System.Windows.Forms.Padding(4);
-            this.task3.Name = "task3";
-            this.task3.Size = new System.Drawing.Size(341, 160);
-            this.task3.TabIndex = 4;
+            this.panelNormalJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelNormalJob.BackColor = System.Drawing.Color.Green;
+            this.panelNormalJob.Controls.Add(this.vScrollBar3);
+            this.panelNormalJob.Controls.Add(this.btnEdit3);
+            this.panelNormalJob.Location = new System.Drawing.Point(400, 195);
+            this.panelNormalJob.Margin = new System.Windows.Forms.Padding(4);
+            this.panelNormalJob.Name = "panelNormalJob";
+            this.panelNormalJob.Size = new System.Drawing.Size(341, 160);
+            this.panelNormalJob.TabIndex = 4;
             // 
             // vScrollBar3
             // 
@@ -188,17 +190,17 @@
             this.btnEdit3.Text = "Edit";
             this.btnEdit3.UseVisualStyleBackColor = false;
             // 
-            // panelAllList
+            // panelAllJob
             // 
-            this.panelAllList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelAllList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panelAllList.Controls.Add(this.btnEdit5);
-            this.panelAllList.Controls.Add(this.vScrollBar1);
-            this.panelAllList.Location = new System.Drawing.Point(31, 16);
-            this.panelAllList.Margin = new System.Windows.Forms.Padding(4);
-            this.panelAllList.Name = "panelAllList";
-            this.panelAllList.Size = new System.Drawing.Size(348, 341);
-            this.panelAllList.TabIndex = 5;
+            this.panelAllJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAllJob.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panelAllJob.Controls.Add(this.btnEdit5);
+            this.panelAllJob.Controls.Add(this.vScrollBar1);
+            this.panelAllJob.Location = new System.Drawing.Point(31, 16);
+            this.panelAllJob.Margin = new System.Windows.Forms.Padding(4);
+            this.panelAllJob.Name = "panelAllJob";
+            this.panelAllJob.Size = new System.Drawing.Size(341, 341);
+            this.panelAllJob.TabIndex = 5;
             // 
             // btnEdit5
             // 
@@ -213,7 +215,7 @@
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(326, 22);
+            this.vScrollBar1.Location = new System.Drawing.Point(318, 23);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(21, 317);
             this.vScrollBar1.TabIndex = 0;
@@ -240,18 +242,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Emergency";
             // 
-            // task2
+            // panelImportantJob
             // 
-            this.task2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.task2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.task2.Controls.Add(this.vScrollBar2);
-            this.task2.Controls.Add(this.btnEdit2);
-            this.task2.Controls.Add(this.panel2);
-            this.task2.Location = new System.Drawing.Point(400, 4);
-            this.task2.Margin = new System.Windows.Forms.Padding(4);
-            this.task2.Name = "task2";
-            this.task2.Size = new System.Drawing.Size(342, 164);
-            this.task2.TabIndex = 4;
+            this.panelImportantJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelImportantJob.BackColor = System.Drawing.Color.Goldenrod;
+            this.panelImportantJob.Controls.Add(this.vScrollBar2);
+            this.panelImportantJob.Controls.Add(this.btnEdit2);
+            this.panelImportantJob.Controls.Add(this.panel2);
+            this.panelImportantJob.Location = new System.Drawing.Point(400, 4);
+            this.panelImportantJob.Margin = new System.Windows.Forms.Padding(4);
+            this.panelImportantJob.Name = "panelImportantJob";
+            this.panelImportantJob.Size = new System.Drawing.Size(341, 164);
+            this.panelImportantJob.TabIndex = 4;
             // 
             // vScrollBar2
             // 
@@ -293,17 +295,17 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Important";
             // 
-            // task1
+            // panelEmergencyJob
             // 
-            this.task1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.task1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.task1.Controls.Add(this.vScrollBar4);
-            this.task1.Controls.Add(this.btnEdit1);
-            this.task1.Location = new System.Drawing.Point(755, 13);
-            this.task1.Margin = new System.Windows.Forms.Padding(4);
-            this.task1.Name = "task1";
-            this.task1.Size = new System.Drawing.Size(341, 155);
-            this.task1.TabIndex = 4;
+            this.panelEmergencyJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelEmergencyJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelEmergencyJob.Controls.Add(this.vScrollBar4);
+            this.panelEmergencyJob.Controls.Add(this.btnEdit1);
+            this.panelEmergencyJob.Location = new System.Drawing.Point(755, 13);
+            this.panelEmergencyJob.Margin = new System.Windows.Forms.Padding(4);
+            this.panelEmergencyJob.Name = "panelEmergencyJob";
+            this.panelEmergencyJob.Size = new System.Drawing.Size(341, 155);
+            this.panelEmergencyJob.TabIndex = 4;
             // 
             // vScrollBar4
             // 
@@ -323,18 +325,18 @@
             this.btnEdit1.Text = "Edit";
             this.btnEdit1.UseVisualStyleBackColor = false;
             // 
-            // task4
+            // panelMissedJob
             // 
-            this.task4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.task4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.task4.Controls.Add(this.panel5);
-            this.task4.Controls.Add(this.vScrollBar5);
-            this.task4.Controls.Add(this.btnEdit4);
-            this.task4.Location = new System.Drawing.Point(755, 192);
-            this.task4.Margin = new System.Windows.Forms.Padding(4);
-            this.task4.Name = "task4";
-            this.task4.Size = new System.Drawing.Size(341, 163);
-            this.task4.TabIndex = 3;
+            this.panelMissedJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelMissedJob.BackColor = System.Drawing.Color.Purple;
+            this.panelMissedJob.Controls.Add(this.panel5);
+            this.panelMissedJob.Controls.Add(this.vScrollBar5);
+            this.panelMissedJob.Controls.Add(this.btnEdit4);
+            this.panelMissedJob.Location = new System.Drawing.Point(755, 192);
+            this.panelMissedJob.Margin = new System.Windows.Forms.Padding(4);
+            this.panelMissedJob.Name = "panelMissedJob";
+            this.panelMissedJob.Size = new System.Drawing.Size(341, 163);
+            this.panelMissedJob.TabIndex = 3;
             // 
             // panel5
             // 
@@ -381,6 +383,7 @@
             // title
             // 
             this.title.BackColor = System.Drawing.Color.Gray;
+            this.title.Controls.Add(this.label8);
             this.title.Controls.Add(this.dtpkDate);
             this.title.Controls.Add(this.btnAllWork);
             this.title.Controls.Add(this.label7);
@@ -399,7 +402,7 @@
             // 
             this.dtpkDate.Location = new System.Drawing.Point(701, 113);
             this.dtpkDate.Name = "dtpkDate";
-            this.dtpkDate.Size = new System.Drawing.Size(255, 22);
+            this.dtpkDate.Size = new System.Drawing.Size(299, 22);
             this.dtpkDate.TabIndex = 7;
             // 
             // btnAllWork
@@ -467,7 +470,7 @@
             // 
             // nmNotify
             // 
-            this.nmNotify.Location = new System.Drawing.Point(148, 10);
+            this.nmNotify.Location = new System.Drawing.Point(137, 11);
             this.nmNotify.Margin = new System.Windows.Forms.Padding(4);
             this.nmNotify.Maximum = new decimal(new int[] {
             360,
@@ -480,10 +483,10 @@
             0,
             0});
             this.nmNotify.Name = "nmNotify";
-            this.nmNotify.Size = new System.Drawing.Size(129, 22);
+            this.nmNotify.Size = new System.Drawing.Size(91, 22);
             this.nmNotify.TabIndex = 1;
             this.nmNotify.Value = new decimal(new int[] {
-            1,
+            10,
             0,
             0,
             0});
@@ -506,12 +509,26 @@
             // 
             // tmNotify
             // 
+            this.tmNotify.Interval = 1000;
             this.tmNotify.Tick += new System.EventHandler(this.tmNotify_Tick);
             // 
-            // notifyIcon1
+            // notifyIcon
             // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(230, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "(seconds)";
             // 
             // Form1
             // 
@@ -519,6 +536,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1205, 571);
             this.Controls.Add(this.content);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Task Manager";
@@ -530,15 +548,15 @@
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.task3.ResumeLayout(false);
-            this.panelAllList.ResumeLayout(false);
+            this.panelNormalJob.ResumeLayout(false);
+            this.panelAllJob.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.task2.ResumeLayout(false);
+            this.panelImportantJob.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.task1.ResumeLayout(false);
-            this.task4.ResumeLayout(false);
+            this.panelEmergencyJob.ResumeLayout(false);
+            this.panelMissedJob.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.title.ResumeLayout(false);
@@ -553,11 +571,11 @@
         private System.Windows.Forms.Panel content;
         private System.Windows.Forms.Panel title;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel task3;
-        private System.Windows.Forms.Panel task2;
-        private System.Windows.Forms.Panel task1;
-        private System.Windows.Forms.Panel task4;
-        private System.Windows.Forms.Panel panelAllList;
+        private System.Windows.Forms.Panel panelNormalJob;
+        private System.Windows.Forms.Panel panelImportantJob;
+        private System.Windows.Forms.Panel panelEmergencyJob;
+        private System.Windows.Forms.Panel panelMissedJob;
+        private System.Windows.Forms.Panel panelAllJob;
         private System.Windows.Forms.NumericUpDown nmNotify;
         private System.Windows.Forms.CheckBox checkBoxNotify;
         private System.Windows.Forms.Label label1;
@@ -587,7 +605,8 @@
         private System.Windows.Forms.Button btnEdit5;
         private System.Windows.Forms.DateTimePicker dtpkDate;
         private System.Windows.Forms.Timer tmNotify;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Label label8;
     }
 }
 
