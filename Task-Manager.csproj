@@ -63,6 +63,12 @@
     <Compile Include="PlanItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SingleJob.Designer.cs">
+      <DependentUpon>SingleJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SingleJob.resx">
+      <DependentUpon>SingleJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlJob.resx">
       <DependentUpon>UserControlJob.cs</DependentUpon>
     </EmbeddedResource>

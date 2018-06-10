@@ -176,6 +176,5 @@ namespace Task_Manager
                 + "Hoàn thành: " + JobByMonthDone(dtpkDate.Value).Count + " công việc\n"
                 + "Bỏ lỡ: " + JobByMonthMissed(dtpkDate.Value).Count + " công việc");
         }
-
     }
 }
