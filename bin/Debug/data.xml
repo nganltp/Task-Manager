@@ -64,7 +64,7 @@
         <X>0</X>
         <Y>0</Y>
       </FromTime>
-      <Status>EMERGENCY</Status>
+      <Status>MISSED</Status>
     </PlanItem>
     <PlanItem>
       <Date>2018-06-11T00:00:00</Date>
@@ -77,7 +77,7 @@
         <X>7</X>
         <Y>0</Y>
       </FromTime>
-      <Status>IMPORTANT</Status>
+      <Status>DONE</Status>
     </PlanItem>
     <PlanItem>
       <Date>2018-06-11T00:00:00</Date>
@@ -90,7 +90,20 @@
         <X>8</X>
         <Y>0</Y>
       </FromTime>
-      <Status>NORMAL</Status>
+      <Status>MISSED</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-11T00:00:00</Date>
+      <Job>Ăn trưa</Job>
+      <ToTime>
+        <X>13</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>12</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>IMPORTANT</Status>
     </PlanItem>
   </ListJob>
 </PlanData>

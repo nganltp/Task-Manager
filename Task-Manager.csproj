@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllJob.Designer.cs">
+      <DependentUpon>AllJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cons.cs" />
     <Compile Include="DailyPlan.cs">
       <SubType>Form</SubType>
@@ -75,6 +81,9 @@
     <Compile Include="UserControlJob.Designer.cs">
       <DependentUpon>UserControlJob.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllJob.resx">
+      <DependentUpon>AllJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DailyPlan.resx">
       <DependentUpon>DailyPlan.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cover.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

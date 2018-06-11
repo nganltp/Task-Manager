@@ -23,3 +23,4 @@ E:\Task-Manager\obj\Debug\Task-Manager.csproj.CoreCompileInputs.cache
 E:\Task-Manager\obj\Debug\Task-Manager.exe
 E:\Task-Manager\obj\Debug\Task-Manager.pdb
 E:\Task-Manager\obj\Debug\Task_Manager.SingleJob.resources
+E:\Task-Manager\obj\Debug\Task_Manager.AllJob.resources

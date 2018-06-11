@@ -21,7 +21,7 @@ namespace Task_Manager
         private UserControlJob createjob;
         public UserControlJob Createjob { get => createjob; set => createjob = value; }
 
-        FlowLayoutPanel panel = new FlowLayoutPanel();
+        FlowLayoutPanel Panel = new FlowLayoutPanel();
 
         public DailyPlan(DateTime date, PlanData job)
         {
@@ -29,11 +29,10 @@ namespace Task_Manager
 
             this.Date = date;
             this.Job = job;
-
-            panel.Height = jobPanel.Height;
-            panel.Width = jobPanel.Width;
-            jobPanel.Controls.Add(panel);
-            panel.AutoScroll = true;
+            Panel.Height = jobPanel.Height;
+            Panel.Width = jobPanel.Width;
+            jobPanel.Controls.Add(Panel);
+            Panel.AutoScroll = true;
 
             dtpkDate.Value = Date;
 
@@ -57,7 +56,6 @@ namespace Task_Manager
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month
             && p.Date.Day == date.Day && PlanItem.ListStatus.IndexOf(p.Status) == (int)EPlanItem.IMPORTANT).ToList();
         }
-
         List<PlanItem> JobMissed(DateTime date)
         {
             return Job.ListJob.Where(p => p.Date.Year == date.Year && p.Date.Month == date.Month
@@ -76,7 +74,7 @@ namespace Task_Manager
 
         void showJobByDate(DateTime date)
         {
-            panel.Controls.Clear();
+            Panel.Controls.Clear();
 
             if (job != null && Job.ListJob != null)
             {
@@ -93,7 +91,7 @@ namespace Task_Manager
             ajob.Edited += Ajob_Edited;
             ajob.Deleted += Ajob_Deleted;
 
-            panel.Controls.Add(ajob);
+            Panel.Controls.Add(ajob);
         }
         void DeleteJob(PlanItem job)
         {
@@ -101,7 +99,7 @@ namespace Task_Manager
             ajob.Edited += Ajob_Edited;
             ajob.Deleted += Ajob_Deleted;
 
-            panel.Controls.Remove(ajob);
+            Panel.Controls.Remove(ajob);
 
         }
 
@@ -111,14 +109,14 @@ namespace Task_Manager
             dayJob.Edited += Ajob_Edited;
             dayJob.Deleted += Ajob_Deleted;
 
-            panel.Controls.Remove(dayJob);
+            Panel.Controls.Remove(dayJob);
         }
 
         private void Ajob_Deleted(object sender, EventArgs e)
         {
             UserControlJob uc = sender as UserControlJob;
             PlanItem job = uc.Job;
-            panel.Controls.Remove(uc);
+            Panel.Controls.Remove(uc);
             Job.ListJob.Remove(job);
 
             toolStripStatusLabel1.Text = "Tổng: " + JobByDay(dtpkDate.Value).Count + " việc || Emergency: "

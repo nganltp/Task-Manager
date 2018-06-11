@@ -230,7 +230,7 @@ namespace Task_Manager
         //Xem cac cong viec trong ngay
         private void btnTodayWork_Click(object sender, EventArgs e)
         {
-            dtpkDate.Value = DateTime.Now;
+            //dtpkDate.Value = DateTime.Now;
             DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job);
             daily.ShowDialog();
         }
@@ -307,6 +307,13 @@ namespace Task_Manager
             theHour.Text = Convert.ToString(hour);
             theMinute.Text = Convert.ToString(minute);
             theSecond.Text = Convert.ToString(second);
+        }
+
+        //Chon tat ca cong viec hien co
+        private void btnAllWork_Click(object sender, EventArgs e)
+        {
+            AllJob allJob = new AllJob(Job);
+            allJob.ShowDialog();
         }
     }
 }
