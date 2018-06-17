@@ -27,3 +27,8 @@ E:\Task-Manager\obj\Debug\Task_Manager.AllJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.TodayJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.TheJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.AboutForm.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.AboutForm.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.AllJob.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.SingleJob.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.TheJob.resources
+D:\UIT\LTTQ\Task-Manager\obj\Debug\Task_Manager.TodayJob.resources
