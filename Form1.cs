@@ -321,5 +321,16 @@ namespace Task_Manager
             DailyPlan dailyPlan = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job);
             dailyPlan.ShowDialog();
         }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

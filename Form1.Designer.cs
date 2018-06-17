@@ -71,7 +71,7 @@
             this.checkBoxNotify = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addJobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutÚToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.content.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -121,7 +121,7 @@
             this.content.Controls.Add(this.panelAllJob);
             this.content.Controls.Add(this.title);
             this.content.Controls.Add(this.menuStrip1);
-            this.content.Location = new System.Drawing.Point(-1, 0);
+            this.content.Location = new System.Drawing.Point(-1, -1);
             this.content.Margin = new System.Windows.Forms.Padding(4);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(1206, 598);
@@ -257,7 +257,7 @@
             // 
             this.vScrollBar2.Location = new System.Drawing.Point(317, 6);
             this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(21, 129);
+            this.vScrollBar2.Size = new System.Drawing.Size(21, 134);
             this.vScrollBar2.TabIndex = 6;
             // 
             // panelEmergencyJob
@@ -317,7 +317,7 @@
             // panelAllJob
             // 
             this.panelAllJob.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelAllJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panelAllJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelAllJob.Controls.Add(this.vScrollBar1);
             this.panelAllJob.Location = new System.Drawing.Point(36, 249);
             this.panelAllJob.Margin = new System.Windows.Forms.Padding(4);
@@ -533,7 +533,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addJobToolStripMenuItem,
-            this.aboutÚToolStripMenuItem,
+            this.aboutUsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -548,17 +548,19 @@
             this.addJobToolStripMenuItem.Text = "Add Job";
             this.addJobToolStripMenuItem.Click += new System.EventHandler(this.addJobToolStripMenuItem_Click);
             // 
-            // aboutÚToolStripMenuItem
+            // aboutUsToolStripMenuItem
             // 
-            this.aboutÚToolStripMenuItem.Name = "aboutÚToolStripMenuItem";
-            this.aboutÚToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
-            this.aboutÚToolStripMenuItem.Text = "About us";
+            this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.aboutUsToolStripMenuItem.Text = "About us";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -641,7 +643,7 @@
         private System.Windows.Forms.VScrollBar vScrollBar3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addJobToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutÚToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

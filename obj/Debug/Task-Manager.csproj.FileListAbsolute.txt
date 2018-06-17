@@ -26,3 +26,4 @@ E:\Task-Manager\obj\Debug\Task_Manager.SingleJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.AllJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.TodayJob.resources
 E:\Task-Manager\obj\Debug\Task_Manager.TheJob.resources
+E:\Task-Manager\obj\Debug\Task_Manager.AboutForm.resources
