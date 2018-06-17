@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<PlanData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListJob>
+    <PlanItem>
+      <Date>2018-06-10T00:00:00</Date>
+      <Job>Di an</Job>
+      <ToTime>
+        <X>13</X>
+        <Y>30</Y>
+      </ToTime>
+      <FromTime>
+        <X>12</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>MISSED</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-10T00:00:00</Date>
+      <Job>Làm bài tập</Job>
+      <ToTime>
+        <X>22</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>19</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>IMPORTANT</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-10T00:00:00</Date>
+      <Job>Đi ngủ</Job>
+      <ToTime>
+        <X>23</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>22</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>EMERGENCY</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-10T00:00:00</Date>
+      <Job>Đi ngủ tập 2</Job>
+      <ToTime>
+        <X>24</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>23</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>EMERGENCY</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-11T00:00:00</Date>
+      <Job>Đi ngủ tập 3</Job>
+      <ToTime>
+        <X>1</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>0</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>DONE</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-11T00:00:00</Date>
+      <Job>Đi ăn sáng</Job>
+      <ToTime>
+        <X>8</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>7</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>DONE</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-11T00:00:00</Date>
+      <Job>Fix bug</Job>
+      <ToTime>
+        <X>9</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>8</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>MISSED</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-11T00:00:00</Date>
+      <Job>Ăn trưa</Job>
+      <ToTime>
+        <X>13</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>12</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>MISSED</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-15T00:00:00</Date>
+      <Job>Di an com</Job>
+      <ToTime>
+        <X>13</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>12</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>NORMAL</Status>
+    </PlanItem>
+    <PlanItem>
+      <Date>2018-06-17T00:00:00</Date>
+      <Job>Họp nhóm</Job>
+      <ToTime>
+        <X>17</X>
+        <Y>0</Y>
+      </ToTime>
+      <FromTime>
+        <X>16</X>
+        <Y>0</Y>
+      </FromTime>
+      <Status>IMPORTANT</Status>
+    </PlanItem>
+  </ListJob>
+</PlanData>
