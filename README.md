@@ -2,8 +2,7 @@
 **ĐẠI HỌC QUỐC GIA TP.HCM
 TRƯỜNG ĐH CÔNG NGHỆ THÔNG TIN**
 
- ![alt text](http://url/to/img.png)
-
+ ![alt tag](https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_UIT_In.jpg)
 BÁO CÁO ĐỒ ÁN LẬP TRÌNH TRỰC QUAN
 
 ĐỒ ÁN PHẦN MỀM QUẢN LÝ CÔNG VIỆC
